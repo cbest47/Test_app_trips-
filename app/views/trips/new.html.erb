@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+<h3>Add a new trip</h3>
+  <%= form_for @trip, html: { multipart: true } do |f| %>
+
+  <%= f.label :name%>
+  <%= f.text_field :name %>
+
+  <%= f.label :date%>
+  <%= f.date_field :date %>
+
+  <%= f.label :city%>
+  <%= f.text_field :city %>
+
+  <%= f.label :image%>
+  <%= f.file_field :image%>
+
+  <%= f.submit "Submit" %>
+  <% end %>
+<% end %>

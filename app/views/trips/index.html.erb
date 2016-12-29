@@ -1,0 +1,6 @@
+<h1>Trips index</h1>
+<%= link_to 'Create a new trip', new_trip_path%>
+<% @trip.each do |trip| %>
+  <p><%= @trip.image %></p>
+  <p><%= @trip.name %></p>
+<% end %>
